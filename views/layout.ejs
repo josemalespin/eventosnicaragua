@@ -1,0 +1,60 @@
+<html ng-app="moduloPrincipal">
+	<head>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/cssreset-min.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min_naranja.css">
+		<link type="text/css" rel="stylesheet" href="/stylesheets/estilo.css">
+		<script type="text/javascript" src="/javascripts/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="/javascripts/angular.min.js"></script>
+		<script type="text/javascript" src="/javascripts/angular-route.js"></script>
+		<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/javascripts/principal.js"></script>
+	</head>
+	<body style="background:url('/images/pattern.png');margin-top: -20px;" ng-controller="controladorPrincipal">
+		<header style="background:url('/images/pattern-ajc8.png');height:150px">
+		    <div style="width:1024px;margin:0 auto;">
+				<h1 style="color:white;padding-top: 50px;">Eventos</h1>
+				<nav style="color:white;width:1024px;background:#ffa54e;border-radius:5px">
+					<ul class="nav nav-pills">
+						<li class="active"><a href="/">Principal</a></li>
+						<li><a href="/publicarevento">Publicar evento</a></li>
+						<li><a href="prueba2">Contacto</a></li>
+						<li><a href="">Otro</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div id="container" style="width:1024px;margin: 0 auto;position:relative;">
+			<!--Login para los usuarios-->
+			<div class="jumbotron" style="width:300px;height:230px;margin-top:32px;padding: 0px 20px;">
+				<h3>Usuarios registrados:</h2>
+				<div class="input-group">
+				  <span class="input-group-addon"></span>
+				  <input type="text" class="form-control" placeholder="Usuario" ng-model="vUsuario">
+				</div>
+				<br/>
+				<div class="input-group">
+				  <span class="input-group-addon"></span>
+				  <input type="password" class="form-control" placeholder="Contrasena" ng-model="vContra">
+				</div>
+				<br/>
+				<button ng-click="loguear(vUsuario,vContra)">Inicar sesion</button>
+			</div>
+            <!--Contenedor para las vistas-->
+			<div class="jumbotron" style="width:707px;margin-left:14px;display:inline-table;position:absolute;top: 0px;left: 300px;padding: 20px;">
+				   <%- body %>
+			</div>
+
+			<!--Lista de categorias-->
+			<div class="list-group categorias" style="width:300px;display:inline-table;">
+			  <p style="font-weight:bold;">Categorias:</p>
+			  <a href="#" class="list-group-item active">Cultura</a>
+			  <a href="#" class="list-group-item">Musica</a>
+			  <a href="#" class="list-group-item">Deportes</a>
+			  <a href="#" class="list-group-item">Diversion nocturna</a>
+			  <a href="#" class="list-group-item">Otros</a>
+			</div>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+.jumbotron {
+	border:1px solid #cfcfcf;
+	border-radius: 5px;
+}
+
+.categorias a {
+
+	border-right: 5px solid blue;
+}
